@@ -424,3 +424,4 @@ bin/
 *.resources
 *.dll.config
 /.gitattributes
+/InfoPanel/Latest.log
