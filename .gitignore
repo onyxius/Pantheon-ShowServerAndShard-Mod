@@ -404,7 +404,7 @@ FodyWeavers.xsd
 Latest.log
 LocationDisplay.dll
 .cursor/
-.specstory
+/InfoPanel/.specstory
 obj/
 bin/
 *.dll
@@ -425,3 +425,4 @@ bin/
 *.dll.config
 /.gitattributes
 /InfoPanel/Latest.log
+/InfoPanel/.specstory/.what-is-this.md
