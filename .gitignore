@@ -32,6 +32,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -404,7 +405,7 @@ FodyWeavers.xsd
 Latest.log
 LocationDisplay.dll
 .cursor/
-.specstory/
+/InfoPanel/.specstory
 obj/
 bin/
 *.dll
@@ -424,3 +425,5 @@ bin/
 *.resources
 *.dll.config
 /.gitattributes
+/InfoPanel/Latest.log
+/InfoPanel/.specstory/.what-is-this.md

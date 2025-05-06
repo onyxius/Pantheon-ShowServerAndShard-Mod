@@ -11,7 +11,7 @@ public class UIPanelHooks
         // MelonLoader.MelonLogger.Msg($"UIPanel started: {__instance.name}");
         if (__instance.name == "Panel_Compass")
         {
-            InfoPanel.ModMain.CreateInfoPanelText(__instance.transform);
+            ShowServerAndShard.ModMain.CreateInfoPanelText(__instance.transform);
         }
     }
 } 

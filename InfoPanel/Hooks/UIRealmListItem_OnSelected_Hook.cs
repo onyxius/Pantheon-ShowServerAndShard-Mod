@@ -1,5 +1,6 @@
 using HarmonyLib;
 using Il2Cpp;
+using MelonLoader;
 
 namespace InfoPanel.Hooks;
 
@@ -9,8 +10,9 @@ public class UIRealmListItem_OnSelected_Hook
 {
     private static void Postfix(UIRealmListItem __instance)
     {
+        // MelonLogger.Msg($"[InfoPanel] OnSelected hook fired for: {__instance.Name}");
         string serverName = __instance.Name;
-        InfoPanel.ModMain.SetServerName(serverName);
+        ShowServerAndShard.ModMain.SetServerName(serverName);
     }
 }
 
@@ -20,8 +22,9 @@ public class UIRealmListItem_Select_Hook
 {
     private static void Postfix(UIRealmListItem __instance)
     {
+        // MelonLogger.Msg($"[InfoPanel] Select hook fired for: {__instance.Name}");
         string serverName = __instance.Name;
-        InfoPanel.ModMain.SetServerName(serverName);
+        ShowServerAndShard.ModMain.SetServerName(serverName);
     }
 }
 
@@ -31,7 +34,7 @@ public class UIRealmListItem_Init_Hook
 {
     private static void Postfix(UIRealmListItem __instance)
     {
-        // No logging
+        // MelonLogger.Msg($"[InfoPanel] Init hook fired for: {__instance.Name}");
     }
 }
 
@@ -41,7 +44,7 @@ public class UIRealmListItem_RefreshServerLoad_Hook
 {
     private static void Postfix(UIRealmListItem __instance)
     {
-        // No logging
+        // MelonLogger.Msg($"[InfoPanel] RefreshServerLoad hook fired for: {__instance.Name}");
     }
 }
 
@@ -51,6 +54,6 @@ public class UIRealmListItem_Ctor_Hook
 {
     private static void Postfix(UIRealmListItem __instance)
     {
-        // No logging
+        // MelonLogger.Msg("[InfoPanel] UIRealmListItem constructor hook fired.");
     }
 } 

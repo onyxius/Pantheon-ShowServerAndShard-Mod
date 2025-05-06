@@ -1,5 +1,5 @@
 using MelonLoader;
-using InfoPanel;
+using ShowServerAndShard;
 
-[assembly: MelonInfo(typeof(ModMain), nameof(InfoPanel), ModMain.ModVersion, "Onyxius")]
+[assembly: MelonInfo(typeof(ModMain), nameof(ShowServerAndShard), ModMain.ModVersion, "Onyxius")]
 [assembly: MelonGame("Visionary Realms", "Pantheon")]

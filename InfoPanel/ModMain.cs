@@ -4,7 +4,7 @@ using UnityEngine; // For GameObject, Color, and Vector3
 using Il2CppTMPro;
 using UnityEngine.UI;
 
-namespace InfoPanel;
+namespace ShowServerAndShard;
 
 public class ModMain : MelonMod
 {
@@ -15,12 +15,12 @@ public class ModMain : MelonMod
 
     public override void OnInitializeMelon()
     {
-        MelonLogger.Msg("InfoPanel Mod Initialized!");
+        MelonLogger.Msg("ShowServerAndShard Mod Initialized!");
     }
 
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)
     {
-        MelonLogger.Msg($"Scene loaded as: {sceneName}");
+        //MelonLogger.Msg($"Scene loaded as: {sceneName}");
         // UI creation moved to CreateInfoPanelText, called from UIPanelHooks
     }
 
