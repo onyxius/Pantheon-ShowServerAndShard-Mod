@@ -426,4 +426,6 @@ bin/
 *.dll.config
 /.gitattributes
 /InfoPanel/Latest.log
+/InfoPanel/.specstory
 /InfoPanel/.specstory/.what-is-this.md
+
