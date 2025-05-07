@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# ShowServerAndShard
+## ShowServerAndShard
 
 A Pantheon: Rise of the Fallen mod that displays the currently selected server name below the compass UI element.
 
@@ -56,22 +53,7 @@ The mod works automatically - no configuration needed. The server name will be d
 - Automatic updates on server selection
 =======
 =======
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
-=======
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
-<p align="center" width="100%">
-  This mod is for Pantheon: Rise of the Fallen.  It's a simple mod that displays the server and shard the player is logged into and is anchored to the bottom of the compass.
-</p>
-<p align="center" width="100%">
-    <img width="33%" src="https://github.com/user-attachments/assets/f147c80b-3d95-45ea-9315-2734b7d23813"> 
-</p>
+
 <p align="center" width="100%">
 You can get more info on modding Pantheon by joining the Mods of Pantheon discord group https://discord.gg/h96Tuk5h
 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
-=======
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
-=======
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
