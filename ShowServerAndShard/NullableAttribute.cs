@@ -6,6 +6,10 @@ namespace System.Runtime.CompilerServices
     /// Reserved for use by a compiler for tracking metadata.
     /// This attribute should not be used by developers in source code.
     /// </summary>
+<<<<<<< HEAD
+=======
+    //[EditorBrowsable(EditorBrowsableState.Never)]
+>>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, Inherited = false)]
     public sealed class NullableAttribute : Attribute
     {

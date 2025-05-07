@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace ShowServerAndShard;
 
+<<<<<<< HEAD
 /// <summary>
 /// Main mod class that handles the server name display functionality.
 /// This mod adds a text display showing the currently selected server name
@@ -65,6 +66,35 @@ public class ModMain : MelonMod
     public static void CreateInfoPanelText(Transform parent)
     {
         //MelonLogger.Msg($"[ShowServerAndShard] CreateInfoPanelText called. Current serverName: '{serverName}'");
+=======
+public class ModMain : MelonMod
+{
+    public const string ModVersion = "1.0.0";
+    private static GameObject textObject;
+    private static TextMeshProUGUI textMeshPro;
+    private static string serverName = "";
+
+    public override void OnInitializeMelon()
+    {
+        MelonLogger.Msg("ShowServerAndShard Mod Initialized!");
+    }
+
+    public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+    {
+        //MelonLogger.Msg($"Scene loaded as: {sceneName}");
+        // UI creation moved to CreateInfoPanelText, called from UIPanelHooks
+    }
+
+    public static void SetServerName(string name)
+    {
+        serverName = name;
+        if (textMeshPro != null)
+            textMeshPro.text = string.IsNullOrEmpty(serverName) ? "No server selected" : serverName;
+    }
+
+    public static void CreateInfoPanelText(Transform parent)
+    {
+>>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
         if (textObject != null)
         {
             GameObject.Destroy(textObject);
@@ -79,7 +109,10 @@ public class ModMain : MelonMod
 
         // Set text properties
         textMeshPro.text = string.IsNullOrEmpty(serverName) ? "No server selected" : serverName;
+<<<<<<< HEAD
         //MelonLogger.Msg($"[ShowServerAndShard] InfoPanelText initial text: '{textMeshPro.text}'");
+=======
+>>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
         textMeshPro.fontSize = 12;
         textMeshPro.color = Color.yellow;
         textMeshPro.alignment = TextAlignmentOptions.Center;
