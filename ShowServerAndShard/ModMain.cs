@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 namespace ShowServerAndShard;
 
-<<<<<<< HEAD
 /// <summary>
 /// Main mod class that handles the server name display functionality.
 /// This mod adds a text display showing the currently selected server name
@@ -30,7 +29,6 @@ public class ModMain : MelonMod
     /// </summary>
     public override void OnInitializeMelon()
     {
-        //MelonLogger.Msg("[ShowServerAndShard] [DEBUG] Mod Initialized!");
     }
 
     /// <summary>
@@ -38,7 +36,6 @@ public class ModMain : MelonMod
     /// </summary>
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)
     {
-        //MelonLogger.Msg($"[ShowServerAndShard] [DEBUG] Scene loaded: {sceneName} (buildIndex: {buildIndex})");
         // UI creation moved to CreateInfoPanelText, called from UIPanelHooks
     }
 
@@ -54,7 +51,7 @@ public class ModMain : MelonMod
         else
             preselectedServerName = name;
         serverName = name;
-        //MelonLogger.Msg($"[ShowServerAndShard] SetServerName called with: '{name}', isActiveSelection={isActiveSelection}");
+        
         if (textMeshPro != null)
             textMeshPro.text = name;
     }
@@ -65,64 +62,29 @@ public class ModMain : MelonMod
     /// <param name="parent">The parent transform (compass panel) to attach the text to</param>
     public static void CreateInfoPanelText(Transform parent)
     {
-        //MelonLogger.Msg($"[ShowServerAndShard] CreateInfoPanelText called. Current serverName: '{serverName}'");
-=======
-public class ModMain : MelonMod
-{
-    public const string ModVersion = "1.0.0";
-    private static GameObject textObject;
-    private static TextMeshProUGUI textMeshPro;
-    private static string serverName = "";
-
-    public override void OnInitializeMelon()
-    {
-        MelonLogger.Msg("ShowServerAndShard Mod Initialized!");
-    }
-
-    public override void OnSceneWasLoaded(int buildIndex, string sceneName)
-    {
-        //MelonLogger.Msg($"Scene loaded as: {sceneName}");
-        // UI creation moved to CreateInfoPanelText, called from UIPanelHooks
-    }
-
-    public static void SetServerName(string name)
-    {
-        serverName = name;
-        if (textMeshPro != null)
-            textMeshPro.text = string.IsNullOrEmpty(serverName) ? "No server selected" : serverName;
-    }
-
-    public static void CreateInfoPanelText(Transform parent)
-    {
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
+        // Clean up existing text object if it exists
         if (textObject != null)
         {
             GameObject.Destroy(textObject);
         }
 
-        // Create a GameObject to hold the text
+        // Create new GameObject for the text
         textObject = new GameObject("InfoPanelText");
         textObject.transform.SetParent(parent, false);
 
-        // Add a TextMeshProUGUI component
+        // Add and configure TextMeshPro component
         textMeshPro = textObject.AddComponent<TextMeshProUGUI>();
-
-        // Set text properties
         textMeshPro.text = string.IsNullOrEmpty(serverName) ? "No server selected" : serverName;
-<<<<<<< HEAD
-        //MelonLogger.Msg($"[ShowServerAndShard] InfoPanelText initial text: '{textMeshPro.text}'");
-=======
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
         textMeshPro.fontSize = 12;
         textMeshPro.color = Color.yellow;
         textMeshPro.alignment = TextAlignmentOptions.Center;
 
-        // Set position using RectTransform
+        // Position the text below the compass
         RectTransform rectTransform = textMeshPro.rectTransform;
-        rectTransform.anchorMin = new Vector2(0.5f, 0f); // anchor to bottom center of compass
+        rectTransform.anchorMin = new Vector2(0.5f, 0f);  // Anchor to bottom center
         rectTransform.anchorMax = new Vector2(0.5f, 0f);
-        rectTransform.pivot = new Vector2(0.5f, 1f); // pivot at top center of text
-        rectTransform.anchoredPosition = new Vector2(0, -5); // 10 units below the compass, adjust as needed
-        rectTransform.sizeDelta = new Vector2(400, 20);
+        rectTransform.pivot = new Vector2(0.5f, 1f);      // Pivot at top center
+        rectTransform.anchoredPosition = new Vector2(0, -5); // 5 units below compass
+        rectTransform.sizeDelta = new Vector2(400, 20);   // Set width and height
     }
 }

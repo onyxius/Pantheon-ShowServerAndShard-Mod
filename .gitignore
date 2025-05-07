@@ -427,9 +427,7 @@ bin/
 /.gitattributes
 /InfoPanel/Latest.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 /InfoPanel/.specstory/.what-is-this.md
 =======
 /InfoPanel/.specstory
-/InfoPanel/.specstory/.what-is-this.md
-
->>>>>>> f70f24938c83148f5d709bd8b99ab22887e94e36
