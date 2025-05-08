@@ -58,7 +58,7 @@ The mod works automatically - no configuration needed. The server name will be d
 =======
 =======
 
-<p align="center" width="100%">
 You can get more info on modding Pantheon by joining the Mods of Pantheon discord group https://discord.gg/h96Tuk5h
+
 You can also get a neat tool to download and deploy your mods here https://github.com/ModsOfPantheon/ModsOfPantheonClient
-</p>
+
