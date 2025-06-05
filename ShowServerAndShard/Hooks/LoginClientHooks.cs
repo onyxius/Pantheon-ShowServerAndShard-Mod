@@ -2,7 +2,6 @@ using System.Net;
 using HarmonyLib;
 using Il2Cpp;
 using Il2CppViNL;
-using MelonLoader;
 
 namespace ShowServerAndShard.Hooks;
 
