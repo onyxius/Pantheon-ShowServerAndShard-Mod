@@ -1,8 +1,8 @@
 ﻿using MelonLoader;
-using UnityEngine; // For GameObject, Color, and Vector3
-//using TMPro;       // For TextMeshPro
+using UnityEngine;
 using Il2CppTMPro;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 namespace ShowServerAndShard;
 
@@ -21,8 +21,6 @@ public class ModMain : MelonMod
     
     // Server Name Tracking
     private static string serverName = "";                    // Current server name
-    public static string preselectedServerName = "";         // Server name from initial selection
-    public static string activelySelectedServerName = "";    // Server name from user selection
 
     /// <summary>
     /// Called when the mod is initialized
@@ -43,13 +41,8 @@ public class ModMain : MelonMod
     /// Updates the server name display and stores the selection state
     /// </summary>
     /// <param name="name">The server name to display</param>
-    /// <param name="isActiveSelection">Whether this is a user selection (true) or pre-selection (false)</param>
-    public static void SetServerName(string name, bool isActiveSelection = false)
+    public static void SetServerName(string name)
     {
-        if (isActiveSelection)
-            activelySelectedServerName = name;
-        else
-            preselectedServerName = name;
         serverName = name;
         
         if (textMeshPro != null)
@@ -65,7 +58,7 @@ public class ModMain : MelonMod
         // Clean up existing text object if it exists
         if (textObject != null)
         {
-            GameObject.Destroy(textObject);
+            Object.Destroy(textObject);
         }
 
         // Create new GameObject for the text
